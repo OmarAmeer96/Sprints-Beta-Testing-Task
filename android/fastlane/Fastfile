@@ -8,13 +8,23 @@ platform :android do
       # flutter run --release -t lib/main_production.dart --flavor production
     sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
     # sh "flutter run --release -t lib/main_production.dart --flavor production --no-tree-shake-icons"
+    version = YAML.load_file('../pubspec.yaml')['version']
     firebase_app_distribution(
       app: ENV["FIREBASE_OPTIONS_ANDROID_APP_ID"],
       firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
       android_artifact_type: "APK",
       android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
       testers: "omar.ameer2333@gmail.com",
-      release_notes: "This is the first release using Fastlane. Enjoy! 🚀"
+      release_notes: <<~NOTES
+      # Live
+      Version Number: #{version}
+      This is a live version of the app.
+
+      What's New:
+      - Added new feature.
+
+      Enjoy! 🚀
+      NOTES
     )
   end
 end

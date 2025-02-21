@@ -17,7 +17,6 @@ platform :android do
       testers: "omar.ameer2333@gmail.com",
       release_notes: <<~NOTES
       # Live
-      Version Number: #{version}
       This is a live version of the app.
 
       What's New:

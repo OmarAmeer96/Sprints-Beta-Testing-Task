@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1052382344224",
+    "project_id": "sprints-beta-testing-task",
+    "storage_bucket": "sprints-beta-testing-task.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052382344224:android:7ca4c024ce751b3349b845",
+        "android_client_info": {
+          "package_name": "com.example.sprints_beta_testing_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1poZYZGCMpX0HJ9DAa736Ld1fO8FpaWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

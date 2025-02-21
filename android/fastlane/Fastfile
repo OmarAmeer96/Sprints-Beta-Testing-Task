@@ -8,7 +8,7 @@ platform :android do
       # flutter run --release -t lib/main_production.dart --flavor production
     sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
     # sh "flutter run --release -t lib/main_production.dart --flavor production --no-tree-shake-icons"
-    version = YAML.load_file('../pubspec.yaml')['version']
+    version = YAML.load_file(File.expand_path('../../pubspec.yaml', __FILE__))['version']
     firebase_app_distribution(
       app: ENV["FIREBASE_OPTIONS_ANDROID_APP_ID"],
       firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
